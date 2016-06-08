@@ -1,6 +1,6 @@
 "use strict";
 
-var Person = require('./person');
+var Person = require('./person').Person;
 
 class Landlord extends Person {
 };

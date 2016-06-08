@@ -1,32 +1,7 @@
-"use strict"
-class Person {
-  constructor(firstName, lastName, email, phone) {
-    this.firstName = firstName
-    this.lastName = lastName
-    this.email = email
-    this.phone = phone
-  }
-  name() {
-    return this.firstName + " " + this.lastName;
-  }
-  printInfo() {
-    console.log(`${this.firstName},${this.lastName},${this.email},${this.phone}`);
-  }
-};
-
-class Landlord extends Person {
-  constructor(firstName, lastName, email, phone) {
-    super(firstName, lastName, email, phone)
-    this.tenants = []
-  }
-};
-
-class Tenant extends Person {
-  constructor(firstName, lastName, email, phone){
-    super(firstName, lastName, email, phone)
-    this.landlord = null
-  }
-};
+"use strict";
+var Person    = require('./models/person').Person
+var Landlord  = require('./models/landlord').Landlord
+var Tenant    = require('./models/tenant').Tenant
 
 // landlord
 var kevin = new Landlord("Kevin", "Mircovich", "kevin@gmail.com", "7276785785");
